@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2593,2718</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1713,2075</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -91,7 +91,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="676,2653" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="676,1970" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="GrundskolaElseElevresor" />
       <Variable x:TypeArguments="x:Boolean" Name="TestElsePrd" />
@@ -114,7 +114,7 @@
         <InArgument x:TypeArguments="x:Boolean">[if(in_Config("Environment").ToString.ToLower.Equals("test"), True, False)]</InArgument>
       </Assign.Value>
     </Assign>
-    <Sequence DisplayName="Masterfil" sap:VirtualizedContainerService.HintSize="634,1445" sap2010:WorkflowViewState.IdRef="Sequence_93">
+    <Sequence DisplayName="Masterfil" sap:VirtualizedContainerService.HintSize="634,762" sap2010:WorkflowViewState.IdRef="Sequence_93">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,10 +190,10 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <If Condition="[in_GrundskolaElseElevresor]" DisplayName="If - Grundskola" sap:VirtualizedContainerService.HintSize="484,708" sap2010:WorkflowViewState.IdRef="If_35">
+      <If Condition="[in_GrundskolaElseElevresor]" DisplayName="If - Grundskola" sap:VirtualizedContainerService.HintSize="484,25" sap2010:WorkflowViewState.IdRef="If_35">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -559,7 +559,7 @@ Select CType(row.ItemArray(4), String)).Distinct().ToList()]</InArgument>
             <av:Point x:Key="ShapeLocation">260.641666666667,127.5</av:Point>
             <av:Size x:Key="ShapeSize">70,87</av:Size>
             <av:PointCollection x:Key="FalseConnector">330.641666666667,171 360.641666666667,171 360.641666666667,171.02 380.641666666667,171.02</av:PointCollection>
-            <av:PointCollection x:Key="TrueConnector">260.641666666667,171 230.641666666667,171 230.641666666667,170.04 210.641666666667,170.04</av:PointCollection>
+            <av:PointCollection x:Key="TrueConnector">260.641666666667,171 230.641666666667,171 230.641666666667,171.04 210.641666666667,171.04</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <FlowDecision.True>
@@ -609,7 +609,7 @@ Select CType(row.ItemArray(4), String)).Distinct().ToList()]</InArgument>
                     <av:PointCollection x:Key="ConnectorLocation">110.641666666667,343.54 110.641666666667,393.54</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Loop through the dt" sap:VirtualizedContainerService.HintSize="3845,5488" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Loop through the dt" sap:VirtualizedContainerService.HintSize="4333,6263" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="StudentInfomrationToFile" />
                     <Variable x:TypeArguments="x:String" Name="NoData" />
@@ -622,8 +622,8 @@ Select CType(row.ItemArray(4), String)).Distinct().ToList()]</InArgument>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_FileToSkolportal]" DisplayName="Read Range Workbook - FilePathFileToSkolportal" sap:VirtualizedContainerService.HintSize="3783,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Elever" WorkbookPath="[FilePathFileToSkolportal]" />
-                  <Assign DisplayName="Assign - List of each Citizen ID, Only Once" sap:VirtualizedContainerService.HintSize="3783,84" sap2010:WorkflowViewState.IdRef="Assign_14">
+                  <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_FileToSkolportal]" DisplayName="Read Range Workbook - FilePathFileToSkolportal" sap:VirtualizedContainerService.HintSize="4271,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Elever" WorkbookPath="[FilePathFileToSkolportal]" />
+                  <Assign DisplayName="Assign - List of each Citizen ID, Only Once" sap:VirtualizedContainerService.HintSize="4271,84" sap2010:WorkflowViewState.IdRef="Assign_14">
                     <Assign.To>
                       <OutArgument x:TypeArguments="scg:List(x:String)">[ListOfCitizenID]</OutArgument>
                     </Assign.To>
@@ -632,7 +632,7 @@ Select CType(row.ItemArray(4), String)).Distinct().ToList()]</InArgument>
 Select CType(row.ItemArray(4), String)).Distinct().ToList()]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign DisplayName="Assign - NoData" sap:VirtualizedContainerService.HintSize="3783,83" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign DisplayName="Assign - NoData" sap:VirtualizedContainerService.HintSize="4271,83" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[NoData]</OutArgument>
                     </Assign.To>
@@ -642,13 +642,13 @@ Select CType(row.ItemArray(4), String)).Distinct().ToList()]</InArgument>
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CitizenIDIndex]" DisplayName="For Each - CitizenID in ListOfCitizenID" sap:VirtualizedContainerService.HintSize="3783,4846" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[ListOfCitizenID]">
+                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CitizenIDIndex]" DisplayName="For Each - CitizenID in ListOfCitizenID" sap:VirtualizedContainerService.HintSize="4271,5621" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[ListOfCitizenID]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:String">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3747,4719" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="4235,5494" sap2010:WorkflowViewState.IdRef="Sequence_73">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="dt_OnlyOneStudent" />
                             <Variable x:TypeArguments="sd:DataTable" Name="dt_OnlyOneStudentCopy" />
@@ -658,7 +658,7 @@ Select CType(row.ItemArray(4), String)).Distinct().ToList()]</InArgument>
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Assign - StudentInfomrationToFile" sap:VirtualizedContainerService.HintSize="3705,84" sap2010:WorkflowViewState.IdRef="Assign_8">
+                          <Assign DisplayName="Assign - StudentInfomrationToFile" sap:VirtualizedContainerService.HintSize="4193,84" sap2010:WorkflowViewState.IdRef="Assign_8">
                             <Assign.To>
                               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[StudentInfomrationToFile]</OutArgument>
                             </Assign.To>
@@ -669,7 +669,7 @@ Let v = NoData
 Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.Item2)]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:FilterDataTable DataTable="[dt_MaserFile]" DisplayName="Filter Data Table - Get only one student" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="3705,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_OnlyOneStudent]" SelectColumnsMode="Remove">
+                          <ui:FilterDataTable DataTable="[dt_MaserFile]" DisplayName="Filter Data Table - Get only one student" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="4193,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_OnlyOneStudent]" SelectColumnsMode="Remove">
                             <ui:FilterDataTable.Filters>
                               <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                 <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -694,7 +694,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:FilterDataTable>
-                          <Assign DisplayName="Assign - Copy for Grundskola" sap:VirtualizedContainerService.HintSize="3705,83" sap2010:WorkflowViewState.IdRef="Assign_28">
+                          <Assign DisplayName="Assign - Copy for Grundskola" sap:VirtualizedContainerService.HintSize="4193,83" sap2010:WorkflowViewState.IdRef="Assign_28">
                             <Assign.To>
                               <OutArgument x:TypeArguments="sd:DataTable">[dt_OnlyOneStudentCopy]</OutArgument>
                             </Assign.To>
@@ -702,7 +702,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                               <InArgument x:TypeArguments="sd:DataTable">[dt_OnlyOneStudent.Copy()]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If Condition="[dt_OnlyOneStudent.RowCount &gt; 0]" DisplayName="If - Student has already been processed" sap:VirtualizedContainerService.HintSize="3705,4181" sap2010:WorkflowViewState.IdRef="If_25">
+                          <If Condition="[dt_OnlyOneStudent.RowCount &gt; 0]" DisplayName="If - Student has already been processed" sap:VirtualizedContainerService.HintSize="4193,4956" sap2010:WorkflowViewState.IdRef="If_25">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -710,7 +710,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="3284,4019" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                              <Sequence sap:VirtualizedContainerService.HintSize="3772,4794" sap2010:WorkflowViewState.IdRef="Sequence_57">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:Int32" Name="StudentIndex" />
                                   <Variable x:TypeArguments="scg:List(x:String)" Name="ListOfValues" />
@@ -722,19 +722,19 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[StudentIndex]" DataTable="[dt_OnlyOneStudent]" DisplayName="For Each Row in Data Table - Only Rows for one student" sap:VirtualizedContainerService.HintSize="3242,3746" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[StudentIndex]" DataTable="[dt_OnlyOneStudent]" DisplayName="For Each Row in Data Table - Only Rows for one student" sap:VirtualizedContainerService.HintSize="3730,4521" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                   <ui:ForEachRow.Body>
                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRowStudent" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3208,3628" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3696,4403" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <If sap2010:Annotation.AnnotationText="Första raden representerar den nyaste raden i filen. Därför borde skolan och skoladressen, epost, för denna rad vara den mest korrekta." Condition="[StudentIndex = 0]" DisplayName="If - StudentIndex = 0" sap:VirtualizedContainerService.HintSize="3166,133" sap2010:WorkflowViewState.IdRef="If_22">
+                                        <If sap2010:Annotation.AnnotationText="Första raden representerar den nyaste raden i filen. Därför borde skolan och skoladressen, epost, för denna rad vara den mest korrekta." Condition="[StudentIndex = 0]" DisplayName="If - StudentIndex = 0" sap:VirtualizedContainerService.HintSize="3654,133" sap2010:WorkflowViewState.IdRef="If_22">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -837,15 +837,15 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                             </Sequence>
                                           </If.Else>
                                         </If>
-                                        <If Condition="[in_GrundskolaElseElevresor]" DisplayName="If - Grundskola or Gymnasium/elevresor" sap:VirtualizedContainerService.HintSize="3166,3367" sap2010:WorkflowViewState.IdRef="If_34">
+                                        <If Condition="[in_GrundskolaElseElevresor]" DisplayName="If - Grundskola or Gymnasium/elevresor" sap:VirtualizedContainerService.HintSize="3654,4142" sap2010:WorkflowViewState.IdRef="If_34">
                                           <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="2821,3205" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="3309,3980" sap2010:WorkflowViewState.IdRef="Sequence_102">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <If Condition="[dt_OnlyOneStudent.RowCount = 1]" DisplayName="If - Only one row" sap:VirtualizedContainerService.HintSize="2779,3117" sap2010:WorkflowViewState.IdRef="If_52">
+                                              <If Condition="[dt_OnlyOneStudent.RowCount = 1]" DisplayName="If - Only one row" sap:VirtualizedContainerService.HintSize="3267,3892" sap2010:WorkflowViewState.IdRef="If_52">
                                                 <If.Then>
                                                   <Sequence sap:VirtualizedContainerService.HintSize="839,691" sap2010:WorkflowViewState.IdRef="Sequence_143">
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -853,7 +853,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <If sap2010:Annotation.AnnotationText="" Condition="[(Not String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Gatuadress&quot;).ToString)) OrElse&#xD;&#xA;(Not String.IsNullOrEmpty(CurrentRowStudent(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xD;&#xA;(Not String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Only one Case BUT new adress" sap:VirtualizedContainerService.HintSize="797,603" sap2010:WorkflowViewState.IdRef="If_41">
+                                                    <If sap2010:Annotation.AnnotationText="" Condition="[(Not String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Gatuadress&quot;).ToString)) OrElse&#xA;(Not String.IsNullOrEmpty(CurrentRowStudent(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xA;(Not String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Only one Case BUT new adress" sap:VirtualizedContainerService.HintSize="797,603" sap2010:WorkflowViewState.IdRef="If_41">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -868,7 +868,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <If Condition="[(String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Gatuadress&quot;).ToString)) OrElse &#xD;&#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xD;&#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="If_39">
+                                                          <If Condition="[(String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Gatuadress&quot;).ToString)) OrElse &#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="If_39">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -967,7 +967,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                           <ui:Comment sap:VirtualizedContainerService.HintSize="334,57" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Ingen ny adress" />
-                                                          <If Condition="[(String.IsNullOrEmpty(CurrentRowStudent(&quot;Gatuadress (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse &#xD;&#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Postnummer (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse&#xD;&#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Postort (VH1/Familjehem/God man/Förmyndare)&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="If_40">
+                                                          <If Condition="[(String.IsNullOrEmpty(CurrentRowStudent(&quot;Gatuadress (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse &#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Postnummer (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse&#xA;(String.IsNullOrEmpty(CurrentRowStudent(&quot;Postort (VH1/Familjehem/God man/Förmyndare)&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="If_40">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1062,7 +1062,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                   </Sequence>
                                                 </If.Then>
                                                 <If.Else>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="1895,2955" sap2010:WorkflowViewState.IdRef="Sequence_144">
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="2383,3730" sap2010:WorkflowViewState.IdRef="Sequence_144">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="x:Int32" Name="IndexOnlyOneStudent" />
                                                       <Variable x:TypeArguments="x:Boolean" Name="FamilyHome" />
@@ -1074,7 +1074,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Assign DisplayName="Assign - Remove duplicates of VH1 firstname" sap:VirtualizedContainerService.HintSize="1853,84" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                                    <Assign DisplayName="Assign - Remove duplicates of VH1 firstname" sap:VirtualizedContainerService.HintSize="2341,84" sap2010:WorkflowViewState.IdRef="Assign_25">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="sd:DataTable">[dt_OnlyOneStudentCopyWithoutDuplicates]</OutArgument>
                                                       </Assign.To>
@@ -1085,19 +1085,19 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                 CopyToDataTable()]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[IndexOnlyOneStudent]" DataTable="[dt_OnlyOneStudentCopyWithoutDuplicates]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1853,2743" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[IndexOnlyOneStudent]" DataTable="[dt_OnlyOneStudentCopyWithoutDuplicates]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="2341,3518" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                                       <ui:ForEachRow.Body>
                                                         <ActivityAction x:TypeArguments="sd:DataRow">
                                                           <ActivityAction.Argument>
                                                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                           </ActivityAction.Argument>
-                                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1819,2625" sap2010:WorkflowViewState.IdRef="Sequence_153">
+                                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2307,3400" sap2010:WorkflowViewState.IdRef="Sequence_153">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <If Condition="[dt_OnlyOneStudentCopyWithoutDuplicates.RowCount &gt; 1]" DisplayName="If - Still more than one" sap:VirtualizedContainerService.HintSize="1777,2537" sap2010:WorkflowViewState.IdRef="If_54">
+                                                            <If Condition="[dt_OnlyOneStudentCopyWithoutDuplicates.RowCount &gt; 1]" DisplayName="If - Still more than one" sap:VirtualizedContainerService.HintSize="2265,3312" sap2010:WorkflowViewState.IdRef="If_54">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1105,14 +1105,14 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                               <If.Then>
-                                                                <Sequence sap:VirtualizedContainerService.HintSize="917,2376" sap2010:WorkflowViewState.IdRef="Sequence_145">
+                                                                <Sequence sap:VirtualizedContainerService.HintSize="1405,3150" sap2010:WorkflowViewState.IdRef="Sequence_145">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:Comment sap:VirtualizedContainerService.HintSize="875,271" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// FamilyHome och växelvis sätts när Första raden för eleven går igenom loopen. &#xD;&#xA;&#xD;&#xA;Det är bara när första raden är familjehem och växelvis som information from rad två ska tas. &#xD;&#xA;Varför inte alltid infomationen tas från andra raden är för att det kan vara samma inskickare för båda ansökningnarna för växelvis. &#xD;&#xA;&#xD;&#xA;Ex. Mamma har både sökt åt sig men också åt pappan fast dom är skillda. " />
-                                                                  <If Condition="[IndexOnlyOneStudent=0]" DisplayName="If - Get Some information only form first row" sap:VirtualizedContainerService.HintSize="875,304" sap2010:WorkflowViewState.IdRef="If_58">
+                                                                  <ui:Comment sap:VirtualizedContainerService.HintSize="1363,271" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// FamilyHome och växelvis sätts när Första raden för eleven går igenom loopen. &#xA;&#xA;Det är bara när första raden är familjehem och växelvis som information from rad två ska tas. &#xA;Varför inte alltid infomationen tas från andra raden är för att det kan vara samma inskickare för båda ansökningnarna för växelvis. &#xA;&#xA;Ex. Mamma har både sökt åt sig men också åt pappan fast dom är skillda. " />
+                                                                  <If Condition="[IndexOnlyOneStudent=0]" DisplayName="If - Get Some information only form first row" sap:VirtualizedContainerService.HintSize="1363,305" sap2010:WorkflowViewState.IdRef="If_58">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1126,7 +1126,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <If Condition="[(Not String.IsNullOrEmpty(CurrentRow(&quot;Ny Gatuadress&quot;).ToString)) OrElse&#xD;&#xA;(Not String.IsNullOrEmpty(CurrentRow(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xD;&#xA;(Not String.IsNullOrEmpty(CurrentRow(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Only one Case BUT new adress" sap:VirtualizedContainerService.HintSize="270,25" sap2010:WorkflowViewState.IdRef="If_61">
+                                                                        <If Condition="[(Not String.IsNullOrEmpty(CurrentRow(&quot;Ny Gatuadress&quot;).ToString)) OrElse&#xA;(Not String.IsNullOrEmpty(CurrentRow(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xA;(Not String.IsNullOrEmpty(CurrentRow(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Only one Case BUT new adress" sap:VirtualizedContainerService.HintSize="270,25" sap2010:WorkflowViewState.IdRef="If_61">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1140,7 +1140,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <If Condition="[(String.IsNullOrEmpty(CurrentRow(&quot;Ny Gatuadress&quot;).ToString)) OrElse &#xD;&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xD;&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="310,25" sap2010:WorkflowViewState.IdRef="If_59">
+                                                                              <If Condition="[(String.IsNullOrEmpty(CurrentRow(&quot;Ny Gatuadress&quot;).ToString)) OrElse &#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="310,25" sap2010:WorkflowViewState.IdRef="If_59">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1238,7 +1238,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                               <ui:Comment sap:VirtualizedContainerService.HintSize="334,57" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// Ingen ny adress" />
-                                                                              <If Condition="[(String.IsNullOrEmpty(CurrentRow(&quot;Gatuadress (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse &#xD;&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Postnummer (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse&#xD;&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Postort (VH1/Familjehem/God man/Förmyndare)&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="If_60">
+                                                                              <If Condition="[(String.IsNullOrEmpty(CurrentRow(&quot;Gatuadress (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse &#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Postnummer (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Postort (VH1/Familjehem/God man/Förmyndare)&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="If_60">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1341,7 +1341,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <If Condition="[CurrentRow(&quot;Ansöker för&quot;).ToString.ToLower.Trim.Contains(&quot;familjehem&quot;) AndAlso IndexOnlyOneStudent=0]" DisplayName="If - First row is familjehem/god man/förmyndare" sap:VirtualizedContainerService.HintSize="875,25" sap2010:WorkflowViewState.IdRef="If_56">
+                                                                  <If Condition="[CurrentRow(&quot;Ansöker för&quot;).ToString.ToLower.Trim.Contains(&quot;familjehem&quot;) AndAlso IndexOnlyOneStudent=0]" DisplayName="If - First row is familjehem/god man/förmyndare" sap:VirtualizedContainerService.HintSize="1363,25" sap2010:WorkflowViewState.IdRef="If_56">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1375,7 +1375,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <If Condition="[CurrentRow(&quot;Växelvistboende&quot;).ToString.ToLower.Trim.Equals(&quot;ja&quot;) AndAlso IndexOnlyOneStudent=0]" DisplayName="If - Växelvis" sap:VirtualizedContainerService.HintSize="875,25" sap2010:WorkflowViewState.IdRef="If_55">
+                                                                  <If Condition="[CurrentRow(&quot;Växelvistboende&quot;).ToString.ToLower.Trim.Equals(&quot;ja&quot;) AndAlso IndexOnlyOneStudent=0]" DisplayName="If - Växelvis" sap:VirtualizedContainerService.HintSize="1363,25" sap2010:WorkflowViewState.IdRef="If_55">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1409,7 +1409,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <If sap2010:Annotation.AnnotationText="Inte familjehem men växelvistboende" Condition="[FamilyHome.Equals(False) AndAlso IndexOnlyOneStudent=0]" DisplayName="If - Not Familjehem" sap:VirtualizedContainerService.HintSize="875,336" sap2010:WorkflowViewState.IdRef="If_79">
+                                                                  <If sap2010:Annotation.AnnotationText="Inte familjehem men växelvistboende" Condition="[FamilyHome.Equals(False) AndAlso IndexOnlyOneStudent=1]" DisplayName="If - Not Familjehem" sap:VirtualizedContainerService.HintSize="1363,1109" sap2010:WorkflowViewState.IdRef="If_79">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1418,63 +1418,247 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                     <If.Then>
-                                                                      <Sequence sap:VirtualizedContainerService.HintSize="300,113" sap2010:WorkflowViewState.IdRef="Sequence_166">
+                                                                      <Sequence sap:VirtualizedContainerService.HintSize="1327,886" sap2010:WorkflowViewState.IdRef="Sequence_166">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <If Condition="[Växelvis]" DisplayName="If - Växelvis but not familjehem" sap:VirtualizedContainerService.HintSize="258,25" sap2010:WorkflowViewState.IdRef="If_62">
+                                                                        <If Condition="[Växelvis]" DisplayName="If - Växelvis but not familjehem" sap:VirtualizedContainerService.HintSize="1285,798" sap2010:WorkflowViewState.IdRef="If_62">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                           <If.Then>
-                                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,247" sap2010:WorkflowViewState.IdRef="Sequence_164">
+                                                                            <Sequence sap:VirtualizedContainerService.HintSize="864,636" sap2010:WorkflowViewState.IdRef="Sequence_164">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Trace" Message="[&quot;Grundskola: Hittade fler än ett ärende på studenten. Inte familjehem + växelvis&quot;]" />
-                                                                              <ui:MultipleAssign DisplayName="Multiple Assign - Add infomration to Dict" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="MultipleAssign_36">
-                                                                                <ui:MultipleAssign.AssignOperations>
-                                                                                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-                                                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_253">
-                                                                                      <ui:AssignOperation.To>
-                                                                                        <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 gatuadress")]</OutArgument>
-                                                                                      </ui:AssignOperation.To>
-                                                                                      <ui:AssignOperation.Value>
-                                                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Gatuadress (VH2)").ToString]</InArgument>
-                                                                                      </ui:AssignOperation.Value>
-                                                                                    </ui:AssignOperation>
-                                                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_254">
-                                                                                      <ui:AssignOperation.To>
-                                                                                        <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postnummer")]</OutArgument>
-                                                                                      </ui:AssignOperation.To>
-                                                                                      <ui:AssignOperation.Value>
-                                                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Postnummer (VH2)").ToString.Replace(" ", "")]</InArgument>
-                                                                                      </ui:AssignOperation.Value>
-                                                                                    </ui:AssignOperation>
-                                                                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_255">
-                                                                                      <ui:AssignOperation.To>
-                                                                                        <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postort")]</OutArgument>
-                                                                                      </ui:AssignOperation.To>
-                                                                                      <ui:AssignOperation.Value>
-                                                                                        <InArgument x:TypeArguments="x:String">[CurrentRow("Postort (VH2)").ToString]</InArgument>
-                                                                                      </ui:AssignOperation.Value>
-                                                                                    </ui:AssignOperation>
-                                                                                  </scg:List>
-                                                                                </ui:MultipleAssign.AssignOperations>
+                                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="822,94" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Trace" Message="[&quot;Grundskola: Hittade fler än ett ärende på studenten. Inte familjehem + växelvis&quot;]" />
+                                                                              <If Condition="[StudentInfomrationToFile(&quot;Adress 1 gatuadress&quot;).ToString.ToLower.Contains(CurrentRow(&quot;Gatuadress (VH1/Familjehem/God man/Förmyndare)&quot;).ToString.ToLower) OrElse &#xD;&#xA;CurrentRow(&quot;Gatuadress (VH1/Familjehem/God man/Förmyndare)&quot;).ToString.ToLower.Contains(StudentInfomrationToFile(&quot;Adress 1 gatuadress&quot;).ToString.ToLower)]" DisplayName="If - Row 1 VH1 is the same adress as Row 2 VH1 but växelvis, take Row 2 VH2 adress" sap:VirtualizedContainerService.HintSize="822,414" sap2010:WorkflowViewState.IdRef="If_81">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                              </ui:MultipleAssign>
+                                                                                <If.Then>
+                                                                                  <Sequence sap:VirtualizedContainerService.HintSize="465,251" sap2010:WorkflowViewState.IdRef="Sequence_202">
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                    <ui:MultipleAssign DisplayName="Multiple Assign - Add infomration to Dict" sap:VirtualizedContainerService.HintSize="423,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_36">
+                                                                                      <ui:MultipleAssign.AssignOperations>
+                                                                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                                                                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_253">
+                                                                                            <ui:AssignOperation.To>
+                                                                                              <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 gatuadress")]</OutArgument>
+                                                                                            </ui:AssignOperation.To>
+                                                                                            <ui:AssignOperation.Value>
+                                                                                              <InArgument x:TypeArguments="x:String">[CurrentRow("Gatuadress (VH2)").ToString]</InArgument>
+                                                                                            </ui:AssignOperation.Value>
+                                                                                          </ui:AssignOperation>
+                                                                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_254">
+                                                                                            <ui:AssignOperation.To>
+                                                                                              <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postnummer")]</OutArgument>
+                                                                                            </ui:AssignOperation.To>
+                                                                                            <ui:AssignOperation.Value>
+                                                                                              <InArgument x:TypeArguments="x:String">[CurrentRow("Postnummer (VH2)").ToString.Replace(" ", "")]</InArgument>
+                                                                                            </ui:AssignOperation.Value>
+                                                                                          </ui:AssignOperation>
+                                                                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_255">
+                                                                                            <ui:AssignOperation.To>
+                                                                                              <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postort")]</OutArgument>
+                                                                                            </ui:AssignOperation.To>
+                                                                                            <ui:AssignOperation.Value>
+                                                                                              <InArgument x:TypeArguments="x:String">[CurrentRow("Postort (VH2)").ToString]</InArgument>
+                                                                                            </ui:AssignOperation.Value>
+                                                                                          </ui:AssignOperation>
+                                                                                        </scg:List>
+                                                                                      </ui:MultipleAssign.AssignOperations>
+                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                        </scg:Dictionary>
+                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                    </ui:MultipleAssign>
+                                                                                  </Sequence>
+                                                                                </If.Then>
+                                                                                <If.Else>
+                                                                                  <Sequence sap:VirtualizedContainerService.HintSize="312,144" sap2010:WorkflowViewState.IdRef="Sequence_203">
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                    <If sap2010:Annotation.AnnotationText="" Condition="[(Not String.IsNullOrEmpty(CurrentRow(&quot;Ny Gatuadress&quot;).ToString)) OrElse&#xA;(Not String.IsNullOrEmpty(CurrentRow(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xA;(Not String.IsNullOrEmpty(CurrentRow(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Only one Case BUT new adress" sap:VirtualizedContainerService.HintSize="270,56" sap2010:WorkflowViewState.IdRef="If_84">
+                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                        </scg:Dictionary>
+                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                      <If.Then>
+                                                                                        <Sequence sap:VirtualizedContainerService.HintSize="376,312" sap2010:WorkflowViewState.IdRef="Sequence_206">
+                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                            </scg:Dictionary>
+                                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                                          <If Condition="[(String.IsNullOrEmpty(CurrentRow(&quot;Ny Gatuadress&quot;).ToString)) OrElse &#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Nytt Postnummer&quot;).ToString)) OrElse&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Ny Postort&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="If_82">
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                            <If.Then>
+                                                                                              <Sequence sap:VirtualizedContainerService.HintSize="376,247" sap2010:WorkflowViewState.IdRef="Sequence_204">
+                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                  </scg:Dictionary>
+                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="Warn" Message="[&quot;Ärendenr: &quot; + CurrentRow(0).ToString +&quot;. Har endast en bokförd adress OCH ny adress men den är ofullständig.&quot;]" />
+                                                                                                <ui:Break sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Break_34" />
+                                                                                              </Sequence>
+                                                                                            </If.Then>
+                                                                                            <If.Else>
+                                                                                              <Sequence sap:VirtualizedContainerService.HintSize="242,80" sap2010:WorkflowViewState.IdRef="Sequence_205">
+                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                  </scg:Dictionary>
+                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                              </Sequence>
+                                                                                            </If.Else>
+                                                                                          </If>
+                                                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Trace" Message="[&quot;Hittade bara ett ärende på studenten och den har bara en bokförd adress MEN en ny adress.&quot;]" />
+                                                                                          <ui:MultipleAssign DisplayName="Multiple Assign - Add infomration to Dict" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="MultipleAssign_43">
+                                                                                            <ui:MultipleAssign.AssignOperations>
+                                                                                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                                                                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_280">
+                                                                                                  <ui:AssignOperation.To>
+                                                                                                    <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 gatuadress")]</OutArgument>
+                                                                                                  </ui:AssignOperation.To>
+                                                                                                  <ui:AssignOperation.Value>
+                                                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("Ny Gatuadress").ToString]</InArgument>
+                                                                                                  </ui:AssignOperation.Value>
+                                                                                                </ui:AssignOperation>
+                                                                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_281">
+                                                                                                  <ui:AssignOperation.To>
+                                                                                                    <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postnummer")]</OutArgument>
+                                                                                                  </ui:AssignOperation.To>
+                                                                                                  <ui:AssignOperation.Value>
+                                                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("Nytt Postnummer").ToString.Replace(" ", "")]</InArgument>
+                                                                                                  </ui:AssignOperation.Value>
+                                                                                                </ui:AssignOperation>
+                                                                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_282">
+                                                                                                  <ui:AssignOperation.To>
+                                                                                                    <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postort")]</OutArgument>
+                                                                                                  </ui:AssignOperation.To>
+                                                                                                  <ui:AssignOperation.Value>
+                                                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("Ny Postort").ToString]</InArgument>
+                                                                                                  </ui:AssignOperation.Value>
+                                                                                                </ui:AssignOperation>
+                                                                                              </scg:List>
+                                                                                            </ui:MultipleAssign.AssignOperations>
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                          </ui:MultipleAssign>
+                                                                                        </Sequence>
+                                                                                      </If.Then>
+                                                                                      <If.Else>
+                                                                                        <Sequence sap:VirtualizedContainerService.HintSize="465,547" sap2010:WorkflowViewState.IdRef="Sequence_209">
+                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                            </scg:Dictionary>
+                                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                                          <ui:Comment sap:VirtualizedContainerService.HintSize="423,57" sap2010:WorkflowViewState.IdRef="Comment_12" Text="// Ingen ny adress" />
+                                                                                          <If Condition="[(String.IsNullOrEmpty(CurrentRow(&quot;Gatuadress (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse &#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Postnummer (VH1/Familjehem/God man/Förmyndare)&quot;).ToString)) OrElse&#xA;(String.IsNullOrEmpty(CurrentRow(&quot;Postort (VH1/Familjehem/God man/Förmyndare)&quot;).ToString))]" DisplayName="If - Some part of the adress is missing" sap:VirtualizedContainerService.HintSize="423,25" sap2010:WorkflowViewState.IdRef="If_83">
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                            <If.Then>
+                                                                                              <Sequence sap:VirtualizedContainerService.HintSize="376,247" sap2010:WorkflowViewState.IdRef="Sequence_207">
+                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                  </scg:Dictionary>
+                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Warn" Message="[&quot;Ärendenr: &quot; + CurrentRow(0).ToString +&quot;. Har endast en bokförd adress men den är ofullständig.&quot;]" />
+                                                                                                <ui:Break sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Break_35" />
+                                                                                              </Sequence>
+                                                                                            </If.Then>
+                                                                                            <If.Else>
+                                                                                              <Sequence sap:VirtualizedContainerService.HintSize="242,80" sap2010:WorkflowViewState.IdRef="Sequence_208">
+                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                  </scg:Dictionary>
+                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                              </Sequence>
+                                                                                            </If.Else>
+                                                                                          </If>
+                                                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="423,94" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Trace" Message="[&quot;Hittade bara ett ärende på studenten och den har bara en bokförd adress.&quot;]" />
+                                                                                          <ui:MultipleAssign DisplayName="Multiple Assign - Add infomration to Dict" sap:VirtualizedContainerService.HintSize="423,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_44">
+                                                                                            <ui:MultipleAssign.AssignOperations>
+                                                                                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                                                                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_283">
+                                                                                                  <ui:AssignOperation.To>
+                                                                                                    <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 gatuadress")]</OutArgument>
+                                                                                                  </ui:AssignOperation.To>
+                                                                                                  <ui:AssignOperation.Value>
+                                                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("Gatuadress (VH1/Familjehem/God man/Förmyndare)").ToString]</InArgument>
+                                                                                                  </ui:AssignOperation.Value>
+                                                                                                </ui:AssignOperation>
+                                                                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_284">
+                                                                                                  <ui:AssignOperation.To>
+                                                                                                    <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postnummer")]</OutArgument>
+                                                                                                  </ui:AssignOperation.To>
+                                                                                                  <ui:AssignOperation.Value>
+                                                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("Postnummer (VH1/Familjehem/God man/Förmyndare)").ToString.Replace(" ", "")]</InArgument>
+                                                                                                  </ui:AssignOperation.Value>
+                                                                                                </ui:AssignOperation>
+                                                                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_285">
+                                                                                                  <ui:AssignOperation.To>
+                                                                                                    <OutArgument x:TypeArguments="x:String">[StudentInfomrationToFile("Adress 2 postort")]</OutArgument>
+                                                                                                  </ui:AssignOperation.To>
+                                                                                                  <ui:AssignOperation.Value>
+                                                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("Postort (VH1/Familjehem/God man/Förmyndare)").ToString]</InArgument>
+                                                                                                  </ui:AssignOperation.Value>
+                                                                                                </ui:AssignOperation>
+                                                                                              </scg:List>
+                                                                                            </ui:MultipleAssign.AssignOperations>
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                          </ui:MultipleAssign>
+                                                                                        </Sequence>
+                                                                                      </If.Else>
+                                                                                    </If>
+                                                                                  </Sequence>
+                                                                                </If.Else>
+                                                                              </If>
                                                                             </Sequence>
                                                                           </If.Then>
                                                                           <If.Else>
@@ -1500,7 +1684,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <If sap2010:Annotation.AnnotationText="Inte familjehem men växelvistboende" Condition="[FamilyHome AndAlso IndexOnlyOneStudent = 1]" DisplayName="If - Not Familjehem" sap:VirtualizedContainerService.HintSize="875,751" sap2010:WorkflowViewState.IdRef="If_80">
+                                                                  <If sap2010:Annotation.AnnotationText="Inte familjehem men växelvistboende" Condition="[FamilyHome AndAlso IndexOnlyOneStudent = 1]" DisplayName="If - Familjehem" sap:VirtualizedContainerService.HintSize="1363,751" sap2010:WorkflowViewState.IdRef="If_80">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1515,7 +1699,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <If Condition="[Växelvis]" DisplayName="If - Växelvis but not familjehem" sap:VirtualizedContainerService.HintSize="797,440" sap2010:WorkflowViewState.IdRef="If_67">
+                                                                        <If Condition="[Växelvis]" DisplayName="If - Växelvis And familjehem" sap:VirtualizedContainerService.HintSize="797,440" sap2010:WorkflowViewState.IdRef="If_67">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1713,10 +1897,10 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <ui:Comment sap:VirtualizedContainerService.HintSize="875,271" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Ta första raden, kolla om familjehem/godman, kolla om växelvis&#xD;&#xA;&#xD;&#xA;Om första raden inte famljehem/godman&#xD;&#xA;- Ta randens innehåll, lägg in ev växelvis, gå vidare till nästa elev&#xD;&#xA;&#xD;&#xA;Om första raden är Familjeem/godamn&#xD;&#xA;- Ta randens innehåll, om växelvis, Ta rad två, och adressuppgifterna för VH1 och lägg som sekundär adress (Kollar också om rad 2 har ny adress)" />
-                                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="875,25" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+                                                                  <ui:Comment sap:VirtualizedContainerService.HintSize="1363,271" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Ta första raden, kolla om familjehem/godman, kolla om växelvis&#xA;&#xA;Om första raden inte famljehem/godman&#xA;- Ta randens innehåll, lägg in ev växelvis, gå vidare till nästa elev&#xA;&#xA;Om första raden är Familjeem/godamn&#xA;- Ta randens innehåll, om växelvis, Ta rad två, och adressuppgifterna för VH1 och lägg som sekundär adress (Kollar också om rad 2 har ny adress)" />
+                                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1250,25" sap2010:WorkflowViewState.IdRef="CommentOut_19">
                                                                     <ui:CommentOut.Body>
-                                                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="371,113" sap2010:WorkflowViewState.IdRef="Sequence_201">
+                                                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="917,113" sap2010:WorkflowViewState.IdRef="Sequence_201">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2177,7 +2361,7 @@ Select t = Tuple.Create(k,v)).ToDictionary(Function (t) t.Item1, Function (t) t.
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Trace" Message="[&quot;Grundskola: Hittade ett ärende på studenten som är Växelvis = Halvprodukt&quot;]" />
-                                                                        <ui:Comment sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Halvprodukt&#xD;&#xA;&#xD;&#xA;En rad, men bara växelvis" />
+                                                                        <ui:Comment sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Halvprodukt&#xA;&#xA;En rad, men bara växelvis" />
                                                                         <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="CommentOut_18">
                                                                           <ui:CommentOut.Body>
                                                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_198">
