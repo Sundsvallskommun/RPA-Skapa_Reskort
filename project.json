@@ -1,5 +1,6 @@
 {
   "name": "Skapa Reskort",
+  "projectId": "76a3e61f-2712-455a-868f-fc9196050536",
   "description": "Skapar reskort genom att sammanställa en fil för Skolplattformen, av underlag från Masterfil från Grundskola/Elevresor",
   "main": "Main.xaml",
   "dependencies": {
@@ -12,7 +13,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.5.0",
-  "projectVersion": "1.0.4",
+  "projectVersion": "1.0.5",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -85,7 +86,8 @@
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
       }
     ],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
